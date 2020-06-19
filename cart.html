@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cart</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cart_style.css">
+  
+<body>
+
+    <!--header-->
+    <div class="head">
+        <div class="d-flex  bg-light head">
+            <div class="mr-auto "><p class="title">SMS your order at 017xxxxxxxx</p></div>
+            <div class=""><button type="button" class="btn  user_profile">User Profile</button></div>
+            <div class=""><button type="button" class="btn log_out">Log out</button></div>
+        </div>
+    </div>
+  
+
+
+
+
+
+
+  <!--navbar-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-info ">
+        <a class="navbar-brand text-white dhakamed" href="#">DhakaMed</a>
+
+        
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mennu">
+                <li class="nav-item">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="margin-top:8px;">
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link text-white"  href="#"> <span class="glyphicon glyphicon-home"></span> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#">Medicines</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Upload Prescription</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#" >Blog</a>
+                </li>  
+            </ul>
+        </div>
+        <i class="fa fa-cart-plus cart"> 2 </i>
+  </nav>
+    
+
+
+     
+
+
+
+
+
+  <!--cart part-->
+    <div class="container">
+        <h3>Medicine Cart</h3><br>
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="main-content">
+                    <hr>
+                    <div class="row">
+                        <div class="col-3">
+                          <a href="#"><img src="image/Medicine_1.jpg" class="img-responsive center-block"></a>
+                        </div>
+                        <div class="col-7">
+                            <h4>Napa Extra 500 mg</h4>
+                            <h6>by Beximco</h6>
+                            <span>
+                                <i class='fas fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <i class='fas fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <i class='fas fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <i class='fas fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <i class='far fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <h6 class="text-info">6 ratings</h6>
+                            </span>
+                            <div class="d-flex font-rale w-25">
+                                <button class="qty-up border bg-light" data-id="pro1"><i class="fas fa-angle-up"></i></button>
+                                <input type="text" data-id="pro1" class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1">
+                                <button data-id="pro1" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
+                            </div>
+                            
+                            <button type="button" class="btn text-danger btn-md delete">Delete</button>
+                            <button type="button" class="btn  text-danger btn-md save">Save for Later</button>
+
+
+                        </div>
+                        <div class="col-2">
+                            <h4 class="text-danger">30 BDT</h4>
+                        </div>
+
+                    </div><hr><!--1st medicine part-->
+
+                    <div class="row"><!--2nd medicine part-->
+                        <div class="col-3">
+                          <a href="#"><img src="image/Medicine_2.jpg" class="img-responsive center-block"></a>
+                        </div>
+                        <div class="col-7">
+                            <h4>Napa Extra 500 mg</h4>
+                            <h6>by Beximco</h6>
+                            <span>
+                                <i class='fas fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <i class='fas fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <i class='fas fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <i class='fas fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <i class='far fa-star' style='font-size:20px;color:rgb(241, 207, 11)'></i>
+                                <h6 class="text-info">6 ratings</h6>
+                            </span>
+                            <!--<form action="#">-->
+                                
+                                <!--<input type="number" id="quantity" name="quantity" min="1" max="300">-->
+                                <div class="d-flex font-rale w-25">
+                                    <button class="qty-up border bg-light" data-id="pro1"><i class="fas fa-angle-up"></i></button>
+                                    <input type="text" data-id="pro1" class="qty_input border px-2 w-100 bg-light" disabled value="1" placeholder="1">
+                                    <button data-id="pro1" class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
+                                </div>
+                                
+                                <button type="button" class="btn text-danger btn-md delete">Delete</button>
+                                <button type="button" class="btn  text-danger btn-md save">Save for Later</button>
+                            <!--</form>-->
+                        </div>
+                        <div class="col-2">
+                            <h4 class="text-danger">30 BDT</h4>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 total">
+                <!--Nested rows within a column-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="sidebar-content ">
+                            <div class="sidebar-inner ">
+                                <i class='text-danger fas fa-arrow-up pt-5 pl-2' > <p class="text-danger pl-4">Your order is not eligible for Delivery</p></i>
+                                
+                                <p class="text-danger pl-5 ">Minimum order amount 300BDT</p>
+                            </div><hr>
+                            <div class="sidebar-inner subtotal">
+                                <h3 class="pl-5 pt-3">Subtotal(2 item):</h3>
+                                <div class="check">
+                                <h4 class="text-danger ">BDT100.00</h4>
+                                <button type="button" class="btn btn-warning btn-md checkout">Checkout</button>
+                                </div> 
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div><br><br><br>
+
+
+
+
+
+
+
+
+
+    <!--footer part-->
+    <div class=" container-fluid footer_back">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-3 text-light">
+                    <h3>DhakaMed</h3>
+                    <p>As vast as the field of healthcare and medicine whether.</p>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-3 text-light">
+                    <h3>Newslatter</h3>
+                    <span>
+                        <form action="#">
+                            <div class="form-group">
+                              <input type="email" class="form-control" placeholder="Email *" id="email">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                          </form>
+                    </span>
+
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-3 text-light">
+                    <h3>Information</h3>
+                    <p>About Us</p>
+                    <p>Delivery Information</p>
+                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
+
+
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-3 text-light">
+                    <h3>Account</h3>
+                    <p>My Account</p>
+                    <p>Order History</p>
+                    <p>Newslatters</p>
+
+                </div>
+            </div>
+           
+            <br><br><p  class=" text-light copyright">@COPYRIGHT2020</p>
+        </div>
+             <!-- <br><br><br><p  class="justify-content-middle text-light">@COPYRIGHT 2020</p>-->
+    </div>
+
+
+</body>
+</html>

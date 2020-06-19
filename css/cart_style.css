@@ -1,0 +1,166 @@
+
+/*cart part*/
+.main-content{
+    min-height: 500px;
+    background: #feffff;
+}
+.sidebar-content{
+    min-height: 300px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border:1px solid rgb(228, 225, 225);
+}
+.check{
+    margin-left: 70px;
+}
+
+.sidebar-inner{
+    transform: translate(-56px, 0px);
+    width:200px;
+}
+
+
+
+
+
+
+
+
+/*............................................media query..........................................*/
+ 
+/*header part media query*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .title{
+        width:180px;
+        
+    }
+    .user_profile{
+        transform: translate(-56px, 9px);
+    }
+    .log_out{
+        transform: translate(-50px, 9px);
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
+
+
+
+
+
+
+
+
+/*media query cart part*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .sidebar-inner{
+        margin-left: 90px;
+        transform: translate(-30px, 0px);
+     }
+    .sidebar-content{
+       height:350px;
+      
+     }
+
+}
+@media only screen and (min-width: 480px) {
+    .sidebar-inner{
+        margin-left: 150px;
+       
+    }
+    
+}
+@media only screen and (min-width: 533px) {
+    .sidebar-inner{
+        margin-left: 170px;
+        width:160px;
+    }
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .sidebar-inner{
+        margin-left: 25px;
+        width:130px;
+    }
+    .sidebar-content{
+        width:130px;
+        height: 400px;
+    }
+    .subtotal{
+        margin-left: 9px;
+    }
+    .check{
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (min-width: 603px) {
+    .sidebar-inner{
+        margin-left: 50px;
+        width:130px;
+    }
+    .sidebar-content{
+        width:130px;
+        height: 400px;
+    }
+    .subtotal{
+        margin-left: 30px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sidebar-inner{
+        margin-left: 52px;
+    }
+    .sidebar-content{
+        width:162px;
+        height: 400px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .sidebar-inner{
+        margin-left: 52px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .sidebar-inner{
+        margin-left: 52px;
+    }
+}
+
+
+
+
+
+
+
+
