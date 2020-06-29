@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Admin Panel_1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/admin_panel1_style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--for piechart headers-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
+    <script src="doughtnut_framework_file_office.js"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar start -->
+        <nav id="sidebar">
+            
+
+            <ul class="list-unstyled components">
+
+                <li class="active">
+                    <a href="#"><i class='fas fa-home'></i> Dashboard</a>
+                </li>
+               
+                <li>
+                    <a href="#"><i class='far fa-file-code'></i> Elements</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class='fas fa-chart-line'></i> Charts</a>
+                </li>
+
+
+                <li>
+                    <a href="#"><i class='fas fa-certificate'></i> Panels</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class='far fa-bell'></i> Notificationss</a>
+                </li>
+
+                <li >
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='far fa-file'></i> Pages</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#"><i class='far fa-newspaper'></i> Tables</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class='	far fa-edit'></i> Typography</a>
+                </li>
+            </ul>
+
+           
+        </nav>
+
+
+
+
+
+
+
+        <!--nav start Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!--<img src="image/logo.jpg" class="rounded" alt="Cinque Terre">-->
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span><--</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="input-group w-25 searccch_bar">  <!--search_bar-->
+                        <input type="text" class="form-control" placeholder="Search dashboard....">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary" type="submit">Go</button>  
+                         </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse navigaation" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active mr-5">
+                                <a class="nav-link" href="#"><i class='far fa-bell' style='font-size:18px;color:red'></i></a>
+                            </li>
+
+                            <li class="nav-item dropdown mr-5">
+                                <i class='far fa-question-circle'></i>
+                                
+                                <div class="btn-group">
+                                    <button type="button" class="btn ">Help</button>
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                                      <span class="caret"></span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Help1</a>
+                                      <a class="dropdown-item" href="#">Help2</a>
+                                    </div>
+                                  </div>
+                            </li>
+
+                            <li class="nav-item dropdown mr-5">
+                                <i class='fas fa-user-circle'></i>
+                                
+                                <div class="btn-group">
+                                    <button type="button" class="btn ">Admin</button>
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                                      <span class="caret"></span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Help1</a>
+                                      <a class="dropdown-item" href="#">Help2</a>
+                                    </div>
+                                  </div>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a href="#" class="btn btn-success" role="button"><i class='fas fa-rocket' style='font-size:18px'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+
+
+
+
+            <!--upper 1st chart part start-->
+           <div class="row lower_back ml-1">
+                <div class="col-sm-12 col-md-4 col-lg-2 m-4 ml-5 upper_1st_chart_box" style="border: 1px solid rgb(221, 215, 215);height:100px;">
+                    <div class="main-content" >
+                        <i class='fas fa-download btn-primary mt-3' style='font-size:30px'></i> 1,252
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-2 m-4 ml-5 upper_1st_chart_box" style="border: 1px solid rgb(221, 215, 215);height:100px;">
+                    <div class="main-content">
+                        <i class='far fa-calendar btn-primary mt-3 ' style='font-size:30px;'></i> 203 Sales
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-2 m-4 ml-5 upper_1st_chart_box" style="border: 1px solid rgb(221, 215, 215);height:100px;">
+                    <div class="main-content">
+                        <i class='far fa-eye btn-primary mt-3' style='font-size:30px'></i> 274,678 visits
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-2 m-4 ml-5 upper_1st_chart_box" style="border: 1px solid rgb(221, 215, 215);height:100px;">
+                    <div class="main-content">
+                        <i class='fas fa-chart-line btn-primary mt-3' style='font-size:30px;'></i> 30% Conversions
+                    </div>
+                </div>
+
+
+
+                       <!--1st chart-->
+                        <div class="row mt-5" >
+                        
+                            <div class="col-12 col-md-12 col-lg-10 first_chart" >
+                                <canvas id="myChart" ></canvas>
+                                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+                                <script>
+
+                                    var ctx = document.getElementById('myChart').getContext('2d');
+                                    var chart = new Chart(ctx, {
+                                        // The type of chart we want to create
+                                        type: 'line',
+
+                                        // The data for our dataset
+                                        data: {
+                                            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                                            datasets: [{
+                                                
+                                                backgroundColor: 'rgb(53, 81, 92)',
+                                                borderColor: 'rgb(255, 200, 2)',
+                                                data: [0, 10, 5, 2, 20, 30, 45]
+                                            }]
+                                        },
+
+                                        // Configuration options go here
+                                        options: {}
+                                    });
+                               </script>
+                
+                            </div>
+
+                            <div class="col-12 col-md-12 col-lg-2">
+                                <div class="mt-5">
+                                    <h3>2,315 <i class='fas fa-angle-up' style='font-size:18px;color: green;'></i> 12%</h3>
+                                    <h6>Total sales</h6>
+                                </div>
+
+                                <div class="mt-5">
+                                    <h3>$5,758 <i class='fas fa-angle-up' style='font-size:18px;color: green;'></i> 23%</h3>
+                                    <h6>Monthly Income</h6>
+                                </div>
+
+                                <div class="mt-5">
+                                    <h3>$65,938 <i class='fas fa-angle-down' style='font-size:18px;color: red;'></i> 8%</h3>
+                                    <h6>Total Income</h6>
+                                </div>
+                            </div>
+
+                        </div>
+           </div>
+
+
+
+            
+
+
+
+
+            
+              
+
+
+            
+            <!--footer section-->
+
+            <div class="mt-5" >
+                <h3 style="text-align: right;font-size: 20px;">@2020 <code class="text-primary">DhakaMed Powered by Woadec.</code><small>All Rights Reserved</small></h3>
+                
+           </div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
