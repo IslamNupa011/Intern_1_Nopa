@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Admin Panel_2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Our Custom CSS -->
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+    <link rel="stylesheet" href="css/admin_panel2_style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--for piechart headers-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
+    <script src="doughtnut_framework_file_office.js"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!--system load chart header-->
+    <script src="circles-master/circles.js"></script>
+    <script src="circles-master/circles.min.js"></script>
+    
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar start -->
+        <nav id="sidebar">
+            
+
+            <ul class="list-unstyled components">
+
+                <li class="active">
+                    <a href="#"><i class='fas fa-home'></i> Dashboard</a>
+                </li>
+               
+                <li>
+                    <a href="#"><i class='far fa-file-code'></i> Elements</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class='fas fa-chart-line'></i> Charts</a>
+                </li>
+
+
+                <li>
+                    <a href="#"><i class='fas fa-certificate'></i> Panels</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class='far fa-bell'></i> Notificationss</a>
+                </li>
+
+                <li >
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='far fa-file'></i> Pages</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#"><i class='far fa-newspaper'></i> Tables</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class='	far fa-edit'></i> Typography</a>
+                </li>
+            </ul>
+
+           
+        </nav>
+
+
+
+
+
+
+
+        <!--nav start Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!--<img src="image/logo.jpg" class="rounded" alt="Cinque Terre">-->
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span><--</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="input-group w-25 searccch_bar">  <!--search_bar-->
+                        <input type="text" class="form-control" placeholder="Search dashboard....">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary" type="submit">Go</button>  
+                         </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse navigaation" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active mr-5">
+                                <a class="nav-link" href="#"><i class='far fa-bell' style='font-size:18px;color:red'></i></a>
+                            </li>
+
+                            <li class="nav-item dropdown mr-5">
+                                <i class='far fa-question-circle'></i>
+                                
+                                <div class="btn-group">
+                                    <button type="button" class="btn ">Help</button>
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                                      <span class="caret"></span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Help1</a>
+                                      <a class="dropdown-item" href="#">Help2</a>
+                                    </div>
+                                  </div>
+                            </li>
+
+                            <li class="nav-item dropdown mr-5">
+                                <i class='fas fa-user-circle'></i>
+                                
+                                <div class="btn-group">
+                                    <button type="button" class="btn ">Admin</button>
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                                      <span class="caret"></span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Help1</a>
+                                      <a class="dropdown-item" href="#">Help2</a>
+                                    </div>
+                                  </div>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a href="#" class="btn btn-success" role="button"><i class='fas fa-rocket' style='font-size:18px'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+
+
+
+
+            <!--upper 1st profile card part start-->
+           <div class="row lower_back ml-1 ">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-4 card">
+
+                  <div class="row">
+                    <div class="col-12">
+                      <img src="image/table.jpg " class="table_image img-fluid ml-0">
+                      <div class="profile-pic">
+                          <img src="image/male.png" class="table_image_inner">
+                      </div>
+                    </div>
+                 </div>
+
+                  <div class="row bg-primary">
+                    <div class="col-4">
+                      <h4>45 <br> Projects</h4>
+
+                    </div>
+                    <div class="col-4">
+                      <h4>15 <br> Awards</h4>
+                    </div>
+                    <div class="col-4">
+                      <h4>2174 <br> Points</h4>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                         <h5 class="mt-5">Basic Info</h5>
+                         <p>Birthdate : 12 August,2017 </p>
+                         <p>Mobile : 01234567823 </p>
+                         <p>Email : abc@gmail.com </p>
+                         <p>Website : <code class="text-primary">www.abc.com</code> </p>
+                    </div>
+                    
+
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-7">
+                          <h5>Social</h5>
+                          <span>
+                            <a href="#" class="fab fa-facebook-square" style="font-size: 40px;color:blue"></a>
+                            <a href="#" class="	fab fa-twitter-square" style="font-size: 40px;color:rgb(110, 154, 219)"></a>
+                            <a href="#" class="fab fa-google-plus-square" style="font-size: 40px;color:rgb(238, 48, 48)"></a>
+                            <a href="#" class="	fab fa-github-square" style="font-size: 40px;color:blue"></a>
+                          </span>
+                    </div>
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-12">
+                      <h5>About</h5>
+                      <p>As vast as the field of healthcare and medicine.</p>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary btn-sm view_purchase_button edit_profile">EditProfile</button>
+
+                </div>
+                <!--card right part-->
+                <div class="col-sm-12 col-sm-12 col-md-12 col-lg-7 col-xl-8 ">
+                  <h4 class="mt-3">Samuel's Awards</h4><hr>
+                  <!--box:replacement of hexagon
+
+                  <div class="row">
+                    <div class="col-12 col-sm-12 col-xl-3">
+                      <div class="hexagon ">
+                        <i class='fas fa-sun ml-5 mt-3' style='font-size:36px'></i>
+                        
+                      </div>
+                      <h6>Most Bright Idea</h6>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-xl-3">
+                      <div class="hexagon">
+                        <i class='far fa-clock ml-5 mt-3' style='font-size:36px'></i>
+                      </div>
+                      <h6>Most On-Time</h6>
+                    </div>
+                    
+                    <div class="col-12 col-sm-12 col-md-12 col-xl-3">
+                      <div class="hexagon">
+                        <i class='fas fa-magic ml-5 mt-3' style='font-size:36px'></i>
+
+                      </div>
+                      <h6>Problem Solver</h6>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-xl-3">
+                      <div class="hexagon">
+                        <i class='far fa-heart ml-5 mt-3' style='font-size:36px'></i>
+
+                      </div>
+                      <h6>Most Loved</h6>
+                    </div>
+                    <button type="button" class="btn mt-5 btn-secondary btn-sm view_purchase_button">View All Awards</button>
+                  </div>-->
+
+                   
+
+
+                  <div class="row">
+                    <!--Outer Row -->
+        
+                    <div class="col-sm-12 col-xl-3 hexa1">
+                        <!--First Hexagon -->
+                        <div class="hexagon">
+                            <i class="fas fa-sun" style="font-size:70px"></i>
+                            <div class="face1"></div>
+                            <div class="face2"></div>
+                        </div>
+                        <h6 class="text-center">Most Bright Idea</h6>
+                    </div>
+        
+        
+        
+                    <div class="col-sm-12 col-xl-3 hexa2">
+                        <!--Second Hexagon -->
+                        <div class="hexagon">
+                            <i class="fas fa-clock" style="font-size:70px"></i>
+                            <div class="face1"></div>
+                            <div class="face2"></div>
+                        </div>
+                        <h6 class="text-center">Most On-Time</h6>
+                    </div>
+        
+        
+                    <div class="col-sm-12 col-xl-3 hexa3">
+                        <!--Third Hexagon -->
+                        <div class="hexagon">
+                            <i class="fas fa-magic" style="font-size:70px"></i>
+                            <div class="face1"></div>
+                            <div class="face2"></div>
+                        </div>
+                        <h6 class="text-center">Problem Solver</h6>
+                    </div>
+        
+                    <div class="col-sm-12 col-xl-3 hexa4">
+                        <!--Fourth Hexagon -->
+                        <div class="hexagon">
+                            <i class="fas fa-heart" style="font-size:70px"></i>
+                            <div class="face1"></div>
+                            <div class="face2"></div>
+                        </div>
+                        <h6 class="text-center">Most Loved</h6>
+                    </div>
+                    <button type="button" class="btn mt-5 btn-secondary btn-sm view_purchase_button">View All Awards</button>
+                 </div>
+
+
+
+
+
+
+
+
+                  <div class="row mt-5">
+                    <div class="col-8 col-xl-4">
+                      <h6 class="mt-5">Recent Activity</h6>
+
+                    </div>
+                    <div class="col-2 col-xl-2">
+                      <h6 class="mt-5">Projects 2</h6>
+
+                    </div>
+                  </div><hr>
+
+
+
+                  <div class="row">
+                    <div class="col-2 col-md-2 col-lg-2 ">
+                        <i class='fas fa-comment' style='font-size:25px'></i>
+                    </div>
+                    <div class="col-10 col-md-10 col-lg-10">
+                      <h6>Commented on post <code class="text-primary">Prototyping</code></h6>
+                      <p>2 minutes ago</p>
+                      
+                    </div>
+                 </div>
+
+
+                 <div class="row mt-5">
+                    <div class="col-2 col-md-2 col-lg-2 ">
+                        <i class='fas fa-cloud-upload-alt' style='font-size:25px'></i>
+                    </div>
+                    <div class="col-10 col-md-10 col-lg-10">
+                      <h6>Uploaded new file <code class="text-primary">Proposal.docs</code> to project <code class="text-primary">New Year Campaign</code></h6>
+                      <p>7 hours ago</p>
+                      
+                    </div>
+                 </div>
+
+
+
+
+                 <div class="row mt-5">
+                    <div class="col-2 col-md-2 col-lg-2 ">
+                        <i class='fas fa-plus' style='font-size:25px'></i>
+                    </div>
+                    <div class="col-10 col-md-10 col-lg-10">
+                      <h6>Added <code class="text-primary">Martin</code> and <code class="text-primary">3 others colleagues</code> to repository</h6>
+                      <p>2 days ago</p>
+                      
+                    </div>
+                 </div>
+
+
+                 <div class="row mt-5">
+                    <div class="col-2 col-md-2 col-lg-2 ">
+                        <i class='fas fa-chevron-circle-down' style='font-size:25px'></i>
+                    </div>
+                    <div class="col-10 col-md-10 col-lg-10">
+                      <h6>Finished 80% of all <code class="text-primary">assigned tasks</code></h6>
+                      <p>1 day ago</p>
+                      
+                    </div>
+                  </div>
+                  <button type="button" class="btn mt-5 mb-5 btn-secondary btn-sm view_purchase_button">See All Activity</button>
+
+
+                </div>     
+           </div>
+
+
+
+            
+
+
+
+
+            <!--table section code-->
+            <h4 class="mt-5">Tables</h4>
+
+            <div class="row ml-3 mt-5">
+                <div class="col-12 col-md-12 col-lg-6 lower_back table_height">
+                    <h4 class="mt-5">Basic Table</h4>
+                    
+                   
+                             
+                    <table class="table  table_width table-sm table-responsive-sm">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>FirstName</th>
+                          <th>LastName</th>
+                          <th>UserName</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Steve</td>
+                          <td>Jobs</td>
+                          <td>@steve</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Simon</td>
+                          <td>Philips</td>
+                          <td>@simon</td>
+                          
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Jane</td>
+                          <td>Doe</td>
+                          <td>@jane</td>
+                         
+                        </tr>
+                        
+                      </tbody>
+                      
+                      
+                    </table>
+                    
+                </div>
+                <!--2nd table-->
+                <div class="col-12 col-md-12 col-lg-5  lower_back table_height second_table">
+                    <h4 class="mt-5">Table Inside No Padding</h4>
+                    
+                    <table class="table table_width table-sm table-responsive-sm">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>UserName</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Steve</td>
+                            <td>Jobs</td>
+                            <td>@steve</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Simon</td>
+                            <td>Philips</td>
+                            <td>@simon</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Jane</td>
+                            <td>Doe</td>
+                            <td>@jane</td>
+                           
+                          </tr>
+                          
+                        </tbody>
+                        
+                        
+                      </table>
+                </div>
+                
+            </div>
+
+
+
+
+
+
+
+            <!--3rd & 4rth table section-->
+            <div class="row mt-5"><!--3rd table-->
+                <div class="col-12 col-md-12 col-lg-5 lower_back table_height to_do_list">
+                    <h4 class="mt-5">Striped Row</h4>
+                    <table class="table table-striped table_width table-sm table-responsive-sm">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>UserName</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Steve</td>
+                            <td>Jobs</td>
+                            <td>@steve</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Simon</td>
+                            <td>Philips</td>
+                            <td>@simon</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Jane</td>
+                            <td>Doe</td>
+                            <td>@jane</td>
+                           
+                          </tr>
+                          
+                        </tbody>
+                        
+                        
+                      </table>
+
+                </div>
+                <!--4rth table-->
+                <div class="col-12 col-md-12 col-lg-6 lower_back table_height recent_user">
+                    <h4 class="mt-5">Hover Row</h4>
+                    <table class="table table-hover table_width table-sm table-responsive-sm">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>UserName</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Steve</td>
+                            <td>Jobs</td>
+                            <td>@steve</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Simon</td>
+                            <td>Philips</td>
+                            <td>@simon</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Jane</td>
+                            <td>Doe</td>
+                            <td>@jane</td>
+                           
+                          </tr>
+                          
+                        </tbody>
+                        
+                        
+                      </table>
+                </div>    
+           </div>
+
+            
+
+            
+            <!--footer section-->
+
+            <div class="mt-5" >
+                <h3 style="text-align: right;font-size: 20px;">@2020 <code class="text-primary">DhakaMed Powered by Woadec.</code><small>All Rights Reserved</small></h3>
+                
+           </div>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
